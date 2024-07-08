@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -6,12 +7,14 @@ body {
     color: #333;
 }
 
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Header */
 header {
     background-color: #0073e6;
     color: #fff;
@@ -20,42 +23,48 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Main Section */
 main {
     padding: 2rem 0;
 }
 
-h1, h2 {
-    margin: 0;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
+main h2 {
     color: #0073e6;
     margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
-ul {
+/* Download List */
+#download-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
     list-style-type: none;
     padding: 0;
 }
 
-li {
+#download-list li {
     background: #fff;
     margin: 0.5rem 0;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
 }
 
-li:hover {
+#download-list li:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-a {
+#download-list a {
     text-decoration: none;
     color: #0073e6;
     font-weight: bold;
@@ -63,10 +72,12 @@ a {
     align-items: center;
 }
 
-a i {
+#download-list a i {
     margin-right: 0.5rem;
+    font-size: 1.5rem;
 }
 
+/* Footer */
 footer {
     background-color: #0073e6;
     color: #fff;
@@ -75,4 +86,8 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+footer p {
+    margin: 0;
 }
